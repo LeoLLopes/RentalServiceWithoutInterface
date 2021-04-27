@@ -8,9 +8,9 @@ public class RentalServices {
 	private Double pricePerHour;
 	private Double pricePerDay;
 	
-	private BrazilTaxService taxService;
+	private TaxService taxService;
 	
-	public RentalServices(Double pricePerHour, Double pricePerDay, BrazilTaxService taxService) {
+	public RentalServices(Double pricePerHour, Double pricePerDay, TaxService taxService) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
 		this.taxService = taxService;
@@ -33,33 +33,4 @@ public class RentalServices {
 		
 		carRental.setInvoice(new Invoice(basicPayment, tax));//criei um novo objeto de nota de pagamento e associei com o objeto carRental
 	}
-	
-
-	public Double getPricePerHour() {
-		return pricePerHour;
-	}
-
-	public void setPricePerHour(Double pricePerHour) {
-		this.pricePerHour = pricePerHour;
-	}
-
-	public Double getPricePerDay() {
-		return pricePerDay;
-	}
-
-	public void setPricePerDay(Double pricePerDay) {
-		this.pricePerDay = pricePerDay;
-	}
-
-	public BrazilTaxService getBrazilTaxService() {
-		return taxService;
-	}
-
-	public void setBrazilTaxService(BrazilTaxService brazilTaxService) {
-		this.taxService = brazilTaxService;
-	}
-	
-	
-	
-	
 }
